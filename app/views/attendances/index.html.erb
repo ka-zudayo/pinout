@@ -1,0 +1,18 @@
+<h1>勤怠一覧</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+  </tr>
+  <% @attendances.each do |attendance| %>
+    <tr>
+      <td><%= attendance.date %></td>
+      <td><%= attendance.start_time %></td>
+      <td><%= attendance.end_time %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to '新規勤怠記録', new_attendance_path %>
